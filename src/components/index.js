@@ -65,4 +65,16 @@ export const Spacer = styled.View`
  height: ${(props) => props.size || "10px"};
 `;
 
+export const Input = styled.TextInput.attrs({
+    placeholderTextColor: colors.muted
+})`
+    display: flex;
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 17px ;
+    border-radius: 5px;
+    background: ${colors.light};
+    border: 1px solid ${colors.muted};
+    color: ${colors.dark};
+  `
 

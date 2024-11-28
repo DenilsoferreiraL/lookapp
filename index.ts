@@ -1,4 +1,5 @@
 import { registerRootComponent } from 'expo';
-import { Home } from './src/pages/Home';
+import { SingUp } from './src/pages/Singup';
 
-registerRootComponent(Home);
+
+registerRootComponent(SingUp);
