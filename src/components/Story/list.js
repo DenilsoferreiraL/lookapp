@@ -3,7 +3,7 @@ import { Story } from './index'
 
 export function StoryList() {
     return (
-        <Box fluid>
+        <Box fluid height="260px">
             <Box row fluid justify="space-between" hasPadding height="60px">
                 <Text bold color="dark">Stories</Text>
                 <Text bold color="danger" underline>Mostrar tudo</Text>
