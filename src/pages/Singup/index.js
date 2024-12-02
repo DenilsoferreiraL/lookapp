@@ -1,7 +1,8 @@
 import { StatusBar } from 'react-native'
 import { Title, Text, Box, Button, Spacer, Input } from '../../components'
 
-export function SingUp() {
+export function SingUp({ navigation: { navigate, replace } }) {
+
     return (
         <>
             <StatusBar barStyle="dark-content" />
@@ -16,11 +17,11 @@ export function SingUp() {
                 <Spacer />
                 <Input placeholder='Senha' secureTextEntry />
                 <Spacer size="50px" />
-                <Button block>
+                <Button block onPress={() => replace('Feed')}>
                     <Text color="light" variant="big">Criar nova conta</Text>
                 </Button>
                 <Spacer size="20px" />
-                <Text color="black" variant="big" underline onPress={(() => alert('Clicado'))}>Ir para o login</Text>
+                <Text color="black" variant="big" underline onPress={() => navigate('Home')}>Ir para Home</Text>
                 <Spacer size="70px" />
             </Box>
         </>

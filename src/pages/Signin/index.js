@@ -2,7 +2,7 @@ import { Title, Text, Box, Button, Spacer, Input } from '../../components'
 
 import { StatusBar } from 'react-native'
 
-export function SingIn() {
+export function Signin({ navigation: { navigate, replace } }) {
     return (
         <>
             <StatusBar barStyle="dark-content" />
@@ -16,11 +16,11 @@ export function SingIn() {
                 <Spacer />
                 <Input placeholder='Senha' secureTextEntry />
                 <Spacer size="50px" />
-                <Button block>
+                <Button block onPress={() => replace('Feed')} >
                     <Text color="light" variant="big">Login</Text>
                 </Button>
                 <Spacer size="20px" />
-                <Text color="black" variant="big" underline onPress={(() => alert('Clicado'))}>Criar nova conta</Text>
+                <Text color="black" variant="big" underline onPress={() => navigate('Singup')}>Criar nova conta</Text>
                 <Spacer size="70px" />
             </Box>
         </>
