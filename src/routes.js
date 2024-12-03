@@ -4,8 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Home } from "./pages/Home";
 import { Signin } from "./pages/Signin";
 import { SingUp } from "./pages/Singup";
-import { Feed } from "./pages/Feed";
 import { DrawerNavigate } from "./components/Drawer";
+
 
 const Stack = createStackNavigator()
 
