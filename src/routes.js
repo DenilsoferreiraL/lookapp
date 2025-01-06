@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Signin } from "./pages/Signin";
 import { SingUp } from "./pages/Singup";
 import { DrawerNavigate } from "./components/Drawer";
+import { Category } from "./pages/Marketplace/category";
 
 
 const Stack = createStackNavigator()
@@ -17,6 +18,7 @@ export function Routes() {
                 <Stack.Screen options={{ headerShown: false }} name="Signin" component={Signin} />
                 <Stack.Screen options={{ headerShown: false }} name="Singup" component={SingUp} />
                 <Stack.Screen options={{ headerShown: false }} name="Feed" component={DrawerNavigate} />
+                <Stack.Screen options={{ headerShown: false }} name="Category" component={Category} />
             </Stack.Navigator>
         </NavigationContainer>
     )
