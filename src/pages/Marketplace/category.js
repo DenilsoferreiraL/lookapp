@@ -1,10 +1,21 @@
-import { Box, Text } from "../../components";
+import { StatusBar } from "expo-status-bar";
+import { Touchable } from "../../components";
+import { Header } from "../../components/Header";
+import Icon from 'react-native-vector-icons/SimpleLineIcons'
+import { ProductList } from "../../components/Product/list";
 
 
 export function Category() {
     return (
-        <Box hasPadding align="center" justify="center" background="light">
-            <Text>Categoria</Text>
-        </Box>
+        <>
+            <StatusBar barStyle="dark-content" />
+            <Header
+                title={'Produtos'}
+                right={() => (<Touchable background="light" width="70px" align="center" onPress={() => alert('teste')} >
+                    <Icon name="bag" size={25} />
+                </Touchable>)}
+            />
+            <ProductList />
+        </>
     )
 }
