@@ -1,5 +1,6 @@
 import { Product } from ".";
 import { ScrollView } from "..";
+import women from '../../assets/women.png';
 
 
 export function ProductList() {
@@ -10,7 +11,12 @@ export function ProductList() {
             paddingRight: 10
         }}>
             {Array.from(Array(4))?.map(item => (
-                <Product />
+                <Product
+                    cover={women}
+                    brand="Eliane"
+                    title="Casaco de frio"
+                    price="R$ 350"
+                />
             ))}
 
         </ScrollView>

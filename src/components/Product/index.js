@@ -1,14 +1,12 @@
 import { Box, Cover, Spacer, Text, Touchable } from "..";
 import women from '../../assets/women.png';
 
-export function Product() {
+export function Product({ cover, brand, title, price }) {
 
     return (
         <Touchable
             row
             fluid
-            justify="center"
-            align="center"
             radius="15px"
             spacing="0px 0px 10px 0px"
             background="light"
@@ -19,17 +17,21 @@ export function Product() {
                 width="80px"
                 height="80px"
                 spacing="0 10px 0 0"
-                source={women}
+                source={cover}
             >
             </Cover>
 
-            <Box  >
-                <Text color="dark">Eliane</Text>
+            <Box style={{
+                paddingTop: 0,
+                paddingBottom: 0
+            }} >
+                <Text color="dark">{brand}</Text>
                 <Spacer />
-                <Text color="dark" bold>Casaco grande listrado</Text>
+                <Text color="dark" bold>{title}</Text>
+                <Spacer />
                 <Spacer />
                 <Box row width="100%" justify="space-between">
-                    <Text color="dark">R$350</Text>
+                    <Text color="dark">{price}</Text>
                     <Text
                         color="danger"
                         bold

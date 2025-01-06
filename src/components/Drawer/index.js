@@ -19,7 +19,7 @@ const drawerScreens = [
         icon: "home",
     },
     {
-        name: "Vitrine",
+        name: "Categorias",
         component: Marketplace,
         icon: "bag",
     },
@@ -29,11 +29,7 @@ const drawerScreens = [
         component: Product,
         icon: "tag",
     },
-    {
-        name: "Categorias",
-        component: Category,
-        icon: "grid",
-    },
+
     {
         name: "Pedidos",
         component: Signin,

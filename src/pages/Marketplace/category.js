@@ -10,7 +10,7 @@ export function Category() {
         <>
             <StatusBar barStyle="dark-content" />
             <Header
-                title={'Produtos'}
+                title={'Nome categoria'}
                 right={() => (<Touchable background="light" width="70px" align="center" onPress={() => alert('teste')} >
                     <Icon name="bag" size={25} />
                 </Touchable>)}
