@@ -25,12 +25,6 @@ const drawerScreens = [
     },
 
     {
-        name: "Produtos",
-        component: Product,
-        icon: "tag",
-    },
-
-    {
         name: "Pedidos",
         component: Signin,
         icon: "basket",
