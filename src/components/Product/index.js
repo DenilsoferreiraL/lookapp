@@ -1,10 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
 import { Box, Cover, Spacer, Text, Touchable } from "..";
 import women from '../../assets/women.png';
 
 export function Product({ cover, brand, title, price }) {
-
+    const { navigate } = useNavigation()
     return (
         <Touchable
+            onPress={() => navigate('Product')}
             row
             fluid
             radius="15px"
