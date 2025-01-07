@@ -2,8 +2,6 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from "
 import { Feed } from "../../pages/Feed";
 import { Signin } from "../../pages/Signin";
 import { Marketplace } from "../../pages/Marketplace";
-import { Category } from "../../pages/Marketplace/category";
-import { Product } from "../../pages/Marketplace/product";
 import { colors } from '../../styles/theme.json';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { Title, Spacer } from '../../components/index';
@@ -19,9 +17,9 @@ const drawerScreens = [
         icon: "home",
     },
     {
-        name: "Categorias",
+        name: "Shopping",
         component: Marketplace,
-        icon: "bag",
+        icon: "handbag",
     },
 
     {
