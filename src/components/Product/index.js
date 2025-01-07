@@ -1,6 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
 import { Box, Cover, Spacer, Text, Touchable } from "..";
-import women from '../../assets/women.png';
 
 export function Product({ cover, brand, title, price }) {
     const { navigate } = useNavigation()
@@ -19,7 +18,7 @@ export function Product({ cover, brand, title, price }) {
                 width="80px"
                 height="80px"
                 spacing="0 10px 0 0"
-                source={cover}
+                source={{ uri: cover }}
             >
             </Cover>
 
