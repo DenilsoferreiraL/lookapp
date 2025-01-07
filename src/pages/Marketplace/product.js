@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { StretchyScrollView } from "react-native-stretchy";
 import util from "../../util";
 import { colors } from '../../styles/theme.json'
+import { Picker } from "../../components/Picker";
 
 export function Product() {
     return (
@@ -36,13 +37,27 @@ export function Product() {
                     <Spacer size='20px' />
                     <Title>A.P.C. Collection Spring 2015</Title>
                     <Spacer size='30px' />
-                    <Text color="dark" variant="big">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt ratione, at ducimus iste impedit quibusdam? Hic repellat magnam, deserunt labore quo accusantium totam odio quasi beatae culpa dolore porro.
+                    <Text color="dark">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt ratione, at ducimus iste impedit quibusdam?
+                        Hic repellat magnam, deserunt labore quo accusantium totam odio quasi beatae culpa dolore porro.
                     </Text>
                     <Spacer size='30px' />
-                    <Text color="dark" variant="big">
+                    <Text color="dark">
                         Lorem ipsum dolor  amet consectetur adipisicing elit.
                     </Text>
+                    <Spacer size='30px' />
+                    <Picker
+                        title="Tamanho"
+                        options={[
+                            { label: 'P', value: 'P' },
+                            { label: 'M', value: 'M' },
+                            { label: 'G', value: 'G' },
+                            { label: 'GG', value: 'GG' },
+                            { label: 'XG', value: 'XG' },
+                        ]}
+                        initialValue="P"
+                        onChange={(value) => alert(value)}
+                    />
                     <Spacer size='30px' />
                     <Button block >
                         <Text color="light" variant="big">Adicionar ao Carrinho</Text>
