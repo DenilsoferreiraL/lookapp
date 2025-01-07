@@ -5,7 +5,7 @@ import { colors } from '../../styles/theme.json'
 import { useNavigation } from "@react-navigation/native";
 import util from '../../util';
 
-export function Header({ title = 'Explorar', right = null }) {
+export function Header({ title = 'Explorar', right = null, goBack = false }) {
     const navigation = useNavigation()
 
     return (
@@ -29,8 +29,8 @@ export function Header({ title = 'Explorar', right = null }) {
                     align="center"
                     justify="center"
                     hasPadding
-                    onPress={() => navigation.openDrawer()}>
-                    <Icon name="menu" size={25} />
+                    onPress={() => navigation[!goBack ? 'openDrawer' : 'goBack']()}>
+                    <Icon name={!goBack ? 'menu' : 'arrow-left'} size={25} />
                 </Touchable>
                 <Box align="center" justify="center">
                     <Title variant="normal">{title}</Title>
