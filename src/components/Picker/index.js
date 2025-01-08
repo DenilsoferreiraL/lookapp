@@ -14,7 +14,7 @@ export function Picker({ title = '', options = [], initialValue = '', onChange =
     return (
         <>
             <Text color="dark" bold variant="big">{title}</Text>
-            <Spacer />
+            <Spacer size="20px" />
             <Box row fluid height="50px">
                 {options?.map((opt, index) => (
                     <Touchable
