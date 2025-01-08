@@ -14,13 +14,13 @@
         "title": {
             "sizes": {
                 "small": "22px",
-                "normal": "30px",
+                "normal": "25px",
                 "big": "40px"
             }
         },
         "text": {
             "sizes": {
-                "normal": "13px",
+                "normal": "15px",
                 "big": "17px"
             }
         }
