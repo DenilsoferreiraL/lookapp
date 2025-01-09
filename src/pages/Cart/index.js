@@ -103,11 +103,10 @@ export function Cart() {
                         </Box>
                         <Spacer size="50px" />
                         <PaymentForm onChange={(creditCardData) => { }} />
-                        <Spacer size="30px" />
+                        <Spacer size="10px" />
                         <Button block onPress={() => setTab = {}}>
-                            <Text color="light" variant="big">Confirmar</Text>
+                            <Text color="light" variant="big">Confirmar 231321</Text>
                         </Button>
-
                     </>
                 )}
             </ScrollView >

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Box, Input, Spacer, Text, Title } from "..";
+import React, { useEffect, useRef, useState } from 'react';
+import { Box, Input, Spacer, Text, Title, Touchable } from "..";
+import SegmentedPicker from 'react-native-segmented-picker';
 
 export function PaymentForm({ onChange = (creditCardData) => { } }) {
 
@@ -10,8 +11,36 @@ export function PaymentForm({ onChange = (creditCardData) => { } }) {
         cvv: ''
     })
 
+    const pickerRef = useRef(null)
+
+    useEffect(() => {
+        onChange(data)
+    }, [data])
+
     return (
         <>
+            <SegmentedPicker
+                ref={pickerRef}
+                onConfirm={data => setData({
+                    ...data,
+                    valid_date: `${data.month}/${data.year}`
+                })}
+                options={[
+                    {
+                        key: 'month',
+                        items: [
+                            { label: 'Option 1', value: 'option_1' },
+                            { label: 'Option 2', value: 'option_2' },
+                        ],
+                    },
+                    {
+                        key: 'year',
+                        items: [
+                            { label: 'Option 3', value: 'option_3' },
+                        ],
+                    },
+                ]}
+            />
             <Box>
                 <Title variant="small">Dados de Pagamento</Title>
                 <Spacer />
@@ -37,10 +66,14 @@ export function PaymentForm({ onChange = (creditCardData) => { } }) {
                 <Spacer />
 
                 {/* Data de Validade */}
-                <Input
-                    inputMode="numeric"
-                    placeholder="09/25"
-                />
+                <Touchable width="100%" onPress={() => pickerRef.current.show()}>
+                    <Input
+                        pointerEvents='none'
+                        editable={false}
+                        inputMode="numeric"
+                        placeholder="09/25"
+                    />
+                </Touchable>
                 <Spacer />
 
                 <Box row fluid align="center">
